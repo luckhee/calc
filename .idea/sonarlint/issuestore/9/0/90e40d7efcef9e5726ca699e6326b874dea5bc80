@@ -1,0 +1,8 @@
+
+}
+java:S1118":Add a private constructor to hide the implicit public one.(Α¦»8ρό±ύρ2J$5f622e86-895a-44c4-8faf-b43d7e58610a
+ƒ	java:S125*"<This block of commented-out lines of code should be removed.(ςΪ¬‰ωÿÿÿÿ8τό±ύρ2J$797d0b4c-983a-4464-b01a-e8b5c96781d0
+r	java:S1061"+Replace this use of System.out by a logger.(µΟ…θωÿÿÿÿ8ΐΩµύρ2J$13df53b1-8e9b-4721-8ec6-6f60abd6d966
+r	java:S1062"+Replace this use of System.out by a logger.(ΰςπΎόÿÿÿÿ8λιΏύρ2J$7a6d2783-0965-4707-a981-dfe95d25f47a
+u
+java:S1128"-Remove this unused import 'java.util.Arrays'.(ξ–Ιόÿÿÿÿ8ΑΈύρ2J$35cb523f-20e8-4c9d-9f6c-46c653d49146
