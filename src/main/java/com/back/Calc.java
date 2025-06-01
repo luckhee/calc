@@ -26,15 +26,16 @@ public class Calc {
                     System.out.println(Arrays.toString(splitCf));
 
 
-                } else {
+                }
+                else {
                     result += Integer.parseInt(x);
                     //cnt++;
                 }
             }
-            for(String x : splitCf) {
-                return result += Integer.parseInt(x);
-                //System.out.println("3번 " +result);
-            }
+//            for(String x : splitCf) {
+//                result += Integer.parseInt(x);
+//                System.out.println("3번 " +result);
+//            }
             System.out.println("최종 result = " +result);
             return result;
         }
