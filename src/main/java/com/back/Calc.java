@@ -1,9 +1,11 @@
 package com.back;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Calc {
-    static int result = 0;
+    static int result;
     static int cnt =0;
     static int run(String calc) {
         calc = calc.replaceAll(" ","");
@@ -38,9 +40,7 @@ public class Calc {
 //            }
             System.out.println("최종 result = " +result);
             return result;
-        }
-
-        if(calc.contains("-")) {
+        } else if(calc.contains("-")) {
 
             String[] splitCf = calc.split("-");
             //System.out.println(Arrays.toString(splitCf));
@@ -49,11 +49,18 @@ public class Calc {
             for(String x : splitCf) {
                 result -= Integer.parseInt(x);
             }
+        } else if(calc.contains("*")) {
+            List<String> list = new ArrayList<>(Arrays.asList(calc.split("\\*")));
+            System.out.println(list);
+            int answer =1;
+            for( String x: list) {
+                answer *= Integer.parseInt(x);
+                result = answer;
+            }
+
+
+
         }
-
-
-
-
         return result;
     }
 
