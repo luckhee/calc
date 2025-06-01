@@ -1,8 +1,12 @@
 
 }
-java:S1118":Add a private constructor to hide the implicit public one.(Á¦»8ñü±ıñ2J$5f622e86-895a-44c4-8faf-b43d7e58610a
-ƒ	java:S125*"<This block of commented-out lines of code should be removed.(òÚ¬‰ùÿÿÿÿ8ôü±ıñ2J$797d0b4c-983a-4464-b01a-e8b5c96781d0
-r	java:S1061"+Replace this use of System.out by a logger.(µÏ…èùÿÿÿÿ8ÀÙµıñ2J$13df53b1-8e9b-4721-8ec6-6f60abd6d966
-r	java:S1062"+Replace this use of System.out by a logger.(àòğ¾üÿÿÿÿ8ëé¿ıñ2J$7a6d2783-0965-4707-a981-dfe95d25f47a
-u
-java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8Á¸ıñ2J$35cb523f-20e8-4c9d-9f6c-46c653d49146
+java:S1118":Add a private constructor to hide the implicit public one.(Á¦»8£¨¦Şò2J$7376f4c1-e7c5-42ec-9073-78261fdf23ef
+
+java:S5361"HReplace this call to "replaceAll()" by a call to the "replace()" method.(øÜ®şÿÿÿÿ8¦¨¦Şò2J$c9a3f361-bcd8-4b5b-8813-a0ce24d39aa0
+r	java:S106"+Replace this use of System.out by a logger.(´‡çãşÿÿÿÿ8¥¨¦Şò2J$f38bdd85-7d6c-4af2-8d00-c51f55fc19fb
+r	java:S106"+Replace this use of System.out by a logger.(èºÛ¡üÿÿÿÿ8ùºŞò2J$38ceeb7c-0d92-4481-a4bf-9ba33cc7cf3f
+r	java:S106"+Replace this use of System.out by a logger.(·‡åúÿÿÿÿ8‚ÀÌŞò2J$8c89b6ca-2463-4ad1-8023-0466761269fe
+r	java:S106"+Replace this use of System.out by a logger.(™­Àıÿÿÿÿ8ª×ÌŞò2J$ea4cfcdc-6a26-4670-b14e-9bf55716902a
+r	java:S106"+Replace this use of System.out by a logger.(ÉòÚùÿÿÿÿ8ËåÍŞò2J$1794acc0-1def-43a9-b245-81690cc9d6af
+m	java:S106"+Replace this use of System.out by a logger.(ÜËèö8ÌÏŞò2J$be05a6a6-d11e-4b63-9ad0-dd68033faa8a
+}	java:S125$"<This block of commented-out lines of code should be removed.(·¿ò38‡¸Şò2J$e20319c3-2179-4b0c-8919-bbed6acf5f71

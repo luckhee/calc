@@ -1,0 +1,23 @@
+
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(³ãşØ8şÄ˜ÿñ2
+h	java:S101$"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(šÔ„$8ÿÄ˜ÿñ2
+i	java:S101+"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(±÷È—8ÿÄ˜ÿñ2
+i	java:S1011"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Óêô8ÿÄ˜ÿñ2
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Î‚¨»ıÿÿÿÿ8ÿÄ˜ÿñ2
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÈÛå¹8ÿÄ˜ÿñ2
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÈÛå¹8ÿÄ˜ÿñ2
+r	java:S117&"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›´ı»üÿÿÿÿ8ÿÄ˜ÿñ2
+r	java:S117&"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›´ı»üÿÿÿÿ8ÿÄ˜ÿñ2
+‡
+java:S4165"eRemove this useless assignment; "aë¬´ê¸°" already holds the assigned value along all execution paths.(ÀØÔüÿÿÿÿ8€Å˜ÿñ2
+m	java:S116"QRename this field "ì´ë¦„" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ìô’Û8‰Å˜ÿñ2
+r	java:S116"QRename this field "ë‚˜ì´" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’À©öùÿÿÿÿ8‰Å˜ÿñ2
+s	java:S116"RRename this field "aë¬´ê¸°" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÉ—Úşÿÿÿÿ8‰Å˜ÿñ2
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’«C8ŠÅ˜ÿñ2
+u	java:S116%"TRename this field "ë¬´ê¸°ëª…" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ãŒşşÿÿÿÿ8ŠÅ˜ÿñ2
+o	java:S100&"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›´ı»üÿÿÿÿ8‹Å˜ÿñ2
+L	java:S106'"+Replace this use of System.out by a logger.(Ä¡¯èÿÿÿÿÿ8ŒÅ˜ÿñ2
+>
+java:S1116("Remove this empty statement.(ôŸìúÿÿÿÿ8ŒÅ˜ÿñ2
+Q
+java:S1656"/Remove or correct this useless self-assignment.(ÀØÔüÿÿÿÿ8Å˜ÿñ2

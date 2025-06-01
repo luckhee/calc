@@ -1,56 +1,48 @@
 package com.back;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Calc {
+    static int result = 0;
     static int run(String calc) {
-        List<Integer> list = new ArrayList<>();
-        int result = 0;
-//2 + 2
-
-        if (calc.contains("+")) {
-            String[] calcParam = calc.split("\\+");
-
-            for (String num : calcParam) {
-                list.add(Integer.parseInt(num.trim()));
+        calc = calc.replaceAll(" ","");
+        if(calc.contains("+")) {
+            String[] splitCf = calc.split("\\+"); // [10-10-10-10, 10, 10-10]
+            System.out.println(Arrays.toString(splitCf));
+            for(String x : splitCf) {
+                if(x.contains("-")) {
+                    String[] minusSplitCf = x.split("-");
+                    System.out.println("minus  = "+Arrays.toString(minusSplitCf));
+                    result += Integer.parseInt(minusSplitCf[0]);
+                    System.out.println("1번 " +result);
+                    minusSplitCf[0]="0";
+                    for(String y : minusSplitCf) {
+                        result -= Integer.parseInt(y);
+                        System.out.println("2번 " +result);
+                    }
+                    splitCf[0]="0";
+                }
             }
-
-            for (int num : list) {
-                result += num;
+            for(String x : splitCf) {
+                result += Integer.parseInt(x);
+                System.out.println("3번 " +result);
             }
+            System.out.println("최종 result = " +result);
+            return result;
+        }
+        if(calc.contains("-")) {
 
-        } else if (calc.contains("-")) {
-            String[] calcParam = calc.split("-");
-
-            for (String num : calcParam) {
-                list.add(Integer.parseInt(num.trim()));
-
+            String[] splitCf = calc.split("-");
+            //System.out.println(Arrays.toString(splitCf));
+            result += Integer.parseInt(splitCf[0]);
+            splitCf[0]="0";
+            for(String x : splitCf) {
+                result -= Integer.parseInt(x);
             }
-
-            result += list.get(0);
-
-            for(int i = 1; i <list.size(); i++) {
-                result -= list.get(i);
-            }
-
-// 10 - 20 + 30 == 20
         }
 
 
-        String x = calc.replace(" ",""); // 10-20+30;
-        String[] num = x.split("");
 
-        for(int i = 0; i < num.length; i++) {
-            if(num[i].equals("-") ) {
-                int cutString = Integer.parseInt(x.substring(0,i));
-                x= x.substring(i);
-                System.out.println(x);
-                System.out.println(cutString);
-                result +=cutString;
-            }
-        }
 
         return result;
     }
