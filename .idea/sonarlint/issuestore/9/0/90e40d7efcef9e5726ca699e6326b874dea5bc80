@@ -1,19 +1,7 @@
 
 }
-java:S1118":Add a private constructor to hide the implicit public one.(Α¦»8„Σίς2J$334640d8-13e3-438c-b851-6755e97842c8
+java:S1118":Add a private constructor to hide the implicit public one.(Α¦»8„Σίς2J$a5549b04-793c-4586-9ecb-b3122190d71f
 •
-java:S3776
-"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Ρ©οί8†Σίς2J$d81dc21f-fe2c-4bfe-bc35-fe743750ff64
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Ρ©οί8“ΐΰς2J$80910899-60ce-4eed-bd93-3848569367a8
 
-java:S5361"HReplace this call to "replaceAll()" by a call to the "replace()" method.(ψά®ώÿÿÿÿ8Σίς2J$53467dab-32b3-43f3-93ad-86ad5ae066af
-r	java:S106"+Replace this use of System.out by a logger.(΄‡ηγώÿÿÿÿ8‰Σίς2J$b87dcfe5-cdad-4f31-bd1e-6d6fd26ae543
-m	java:S106"+Replace this use of System.out by a logger.(©¤μ8Σίς2J$3651861a-28bc-471a-8a93-3e6398617d10
-r	java:S106"+Replace this use of System.out by a logger.(·‡εϊÿÿÿÿ8Σίς2J$054ab1c8-87c5-4bdd-87b1-0f05e0d2fbce
-r	java:S106"+Replace this use of System.out by a logger.(™­ΐύÿÿÿÿ8Σίς2J$df554ef3-fb6f-48e9-8478-f5ed87149214
-r	java:S106"+Replace this use of System.out by a logger.(±ΪΒψÿÿÿÿ8Σίς2J$6a0322a5-a9f1-4df2-83f5-381aa2f0ed7d
-r	java:S106"+Replace this use of System.out by a logger.(΄‡ηγώÿÿÿÿ8‹Σίς2J$98c084d0-dbe2-4eb5-a4e4-4694250eac5b
-}	java:S125""<This block of commented-out lines of code should be removed.(¶»8‹Σίς2J$1060f707-9107-4f98-80f0-5e3919a30d53
-m	java:S106)"+Replace this use of System.out by a logger.(άΛθφ8‹Σίς2J$0ffb5e39-093f-484b-b5be-071c94ae0ae0
-ƒ	java:S125%"<This block of commented-out lines of code should be removed.(‹Βώÿÿÿÿ8‹Σίς2J$82e977be-e506-4a48-9e8a-8e6a3ce4251f
-}	java:S125."<This block of commented-out lines of code should be removed.(·Ώς38‹Σίς2J$034fc794-b8e4-44bb-ba38-4077a01359ca
-r	java:S1066"+Replace this use of System.out by a logger.(γΏΆΤωÿÿÿÿ8Σίς2J$bf9e9b01-c1a6-4f43-b62d-f5aff22c2f91
+java:S5361"HReplace this call to "replaceAll()" by a call to the "replace()" method.(ψά®ώÿÿÿÿ8‹“ΐΰς2J$0b7aac0d-77e7-40fd-8ba6-6913440b7c9b
