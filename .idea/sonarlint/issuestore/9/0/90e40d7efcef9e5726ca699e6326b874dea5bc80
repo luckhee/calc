@@ -1,12 +1,21 @@
 
+v
+java:S1121#".Extract the assignment out of this expression.(άΪςπύÿÿÿÿ8κνίς2J$f46f8582-9058-4818-9084-bc334610ba89
 }
-java:S1118":Add a private constructor to hide the implicit public one.(Α¦»8£¨¦ής2J$7376f4c1-e7c5-42ec-9073-78261fdf23ef
+java:S1118":Add a private constructor to hide the implicit public one.(Α¦»8νίς2J$bfd1deb1-7c5a-46b1-a22b-3771409f8cfc
+•
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(Ρ©οί8π’ίς2J$448fb0cb-d397-436d-8d92-283f771c682d
 
-java:S5361"HReplace this call to "replaceAll()" by a call to the "replace()" method.(ψά®ώÿÿÿÿ8¦¨¦ής2J$c9a3f361-bcd8-4b5b-8813-a0ce24d39aa0
-r	java:S106"+Replace this use of System.out by a logger.(΄‡ηγώÿÿÿÿ8¥¨¦ής2J$f38bdd85-7d6c-4af2-8d00-c51f55fc19fb
-r	java:S106"+Replace this use of System.out by a logger.(θΊΫ΅όÿÿÿÿ8ωΊής2J$38ceeb7c-0d92-4481-a4bf-9ba33cc7cf3f
-r	java:S106"+Replace this use of System.out by a logger.(·‡εϊÿÿÿÿ8‚ΐΜής2J$8c89b6ca-2463-4ad1-8023-0466761269fe
-r	java:S106"+Replace this use of System.out by a logger.(™­ΐύÿÿÿÿ8ªΧΜής2J$ea4cfcdc-6a26-4670-b14e-9bf55716902a
-r	java:S106"+Replace this use of System.out by a logger.(ΙςΪωÿÿÿÿ8ΛεΝής2J$1794acc0-1def-43a9-b245-81690cc9d6af
-m	java:S106"+Replace this use of System.out by a logger.(άΛθφ8ΜΟής2J$be05a6a6-d11e-4b63-9ad0-dd68033faa8a
-}	java:S125$"<This block of commented-out lines of code should be removed.(·Ώς38‡Έής2J$e20319c3-2179-4b0c-8919-bbed6acf5f71
+java:S5361	"HReplace this call to "replaceAll()" by a call to the "replace()" method.(ψά®ώÿÿÿÿ8£νίς2J$2484d0ab-46dc-41b5-976d-b22a05db9b11
+r	java:S106"+Replace this use of System.out by a logger.(΄‡ηγώÿÿÿÿ8¤νίς2J$fd28c4e6-04bd-4c46-8fd6-8c77e3263247
+m	java:S106"+Replace this use of System.out by a logger.(©¤μ8¥νίς2J$54aabac5-dba4-44ad-aa13-65edb9d8309b
+r	java:S106"+Replace this use of System.out by a logger.(·‡εϊÿÿÿÿ8¦νίς2J$99bf618c-d31a-4d8e-a809-60d7da2954e6
+r	java:S106"+Replace this use of System.out by a logger.(™­ΐύÿÿÿÿ8§νίς2J$adac3aeb-b456-4873-bc74-22e9e80aa975
+r	java:S106"+Replace this use of System.out by a logger.(±ΪΒψÿÿÿÿ8§νίς2J$acdd519e-3281-4210-b58a-8b81271f8b72
+r	java:S106"+Replace this use of System.out by a logger.(΄‡ηγώÿÿÿÿ8§νίς2J$d57a5bf1-fefb-4721-9384-ae2f81e4a857
+}	java:S125"<This block of commented-out lines of code should be removed.(¶»8‡Μ–ίς2J$e33fb2cc-f59e-4709-a684-b3fc66c62a6c
+X
+java:S1751#"6Remove this "return" statement or make it conditional.(άΪςπύÿÿÿÿ8™ίς2
+]	java:S125$"<This block of commented-out lines of code should be removed.(Φÿ²ύÿÿÿÿ8™ίς2
+m	java:S106&"+Replace this use of System.out by a logger.(άΛθφ8¨νίς2J$2466863f-487b-4534-b51e-72b541f2ba9e
+}	java:S125-"<This block of commented-out lines of code should be removed.(·Ώς38σ’ίς2J$5014ae0f-14b1-4d2c-9fed-e5927df41be2
