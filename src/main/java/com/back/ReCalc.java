@@ -6,7 +6,7 @@ public class ReCalc {
 
         s=s.replaceAll(" ",""); // 2+2
 
-        //기저 조건 재귀를 멈추고 값을 반환하는 조건
+
         if(s.isBlank()) {
             return result;
         }
