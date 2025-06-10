@@ -1,49 +1,60 @@
 package com.back;
 
 public class Calc {
-    static int result;
+    static int result = 0;
+    static String sign = "+";
+    static String changeString = "";
+    static int idx = 0;
+    static int run(String s) {
 
-    static int run(String calc) {
-        result = 0;
-        calc = calc.replaceAll(" ", "");
+        s=s.replaceAll(" ",""); // 1+1
 
-        if (calc.contains("+")) {
-            String[] plusParts = calc.split("\\+");
-            for (int i = 0; i < plusParts.length; i++) {
-                String part = plusParts[i];
-                if (part.contains("-")) {
-                    String[] minusParts = part.split("-");
-                    result += Integer.parseInt(minusParts[0]);
-                    for (int j = 1; j < minusParts.length; j++) {
-                        result -= Integer.parseInt(minusParts[j]);
-                    }
-                } else {
-                    result += Integer.parseInt(part);
-                }
-            }
+
+        if(s.isBlank()) {
             return result;
         }
+        else {
 
-        if (calc.contains("*")) {
-            String[] multiplyParts = calc.split("\\*");
-            result = 1;
-            for (String part : multiplyParts) {
-                result *= Integer.parseInt(part);
+
+
+            sign = findSign(s);
+
+
+
+            String fBit = s.substring(0,idx); //1
+
+            if(sign.equals("+")) {
+                result += Integer.parseInt(fBit);
+            } else if (sign.equals("-")) {
+                result -= Integer.parseInt(fBit);
             }
-            return result;
+
+            s=s.substring(idx); //-1
+            run(s);
         }
-
-        if (calc.contains("-")) {
-            String[] minusParts = calc.split("-");
-            result = Integer.parseInt(minusParts[0]);
-            for (int i = 1; i < minusParts.length; i++) {
-                result -= Integer.parseInt(minusParts[i]);
-            }
-            return result;
-        }
-
-
 
         return result;
     }
+
+    private static String findSign(String s) {
+        //1+1
+        idx = 0;
+        for(char x : s.toCharArray()) { //1+1
+            if(!Character.isDigit(x)){
+
+                idx+=1;
+                changeString = findStringbyIdx(s, idx);
+                return String.valueOf(x);
+            }
+        }
+
+        return "+";
+    }
+
+    private static String findStringbyIdx(String s, int idx) {
+
+        return s.substring(idx);
+
+    }
+
 }
