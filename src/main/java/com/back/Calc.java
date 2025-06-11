@@ -31,8 +31,10 @@ public class Calc {
 
             if(sign.equals("+")) {
                 result += Integer.parseInt(fBit);
-            } else if (sign.equals("-")) {
+            } else if (sign.equals("-") && result == 0) {
                 result += Integer.parseInt(fBit);
+            } else if(sign.equals("-")) {
+                result -= Integer.parseInt(fBit);
             }
             s=s.substring(idx); //-1
 
@@ -57,7 +59,7 @@ public class Calc {
             }
         }
         changeString = findStringbyIdx(s, idx);
-        return "+"; // 이게 문제여 내가보기엔 이게 진짜 대형사고
+        return sign; // 이게 문제여 내가보기엔 이게 진짜 대형사고fd
     }
 
     private static String findStringbyIdx(String s, int idx) {
