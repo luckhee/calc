@@ -42,6 +42,10 @@ public class Calc {
                 numList.remove(cnt);
                 signList.remove(cnt);
 
+            } else if(signList.get(cnt).equals("*")) {
+                result *= Integer.parseInt(numList.get(cnt));
+                numList.remove(cnt);
+                signList.remove(cnt);
             }
         }
 
