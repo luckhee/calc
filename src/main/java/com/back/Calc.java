@@ -5,9 +5,10 @@ public class Calc {
     static String sign = "+";
     static String changeString = "";
     static int idx = 0;
+
     static int run(String s) {
 
-        s=s.replaceAll(" ",""); // 1+1
+        s=s.replaceAll(" ","");
 
         sign = findSign(s);
 
@@ -20,29 +21,15 @@ public class Calc {
              return result;
         }
         else {
-
-
-
-
-
-
-
             String fBit = s.substring(0,idx); //1 여기서 "" 되는 문제 발생
-
-            if(sign.equals("+")) {
-                result += Integer.parseInt(fBit);
-            } else if (sign.equals("-") && result == 0) {
-                result += Integer.parseInt(fBit);
-            } else if(sign.equals("-")) {
-                result -= Integer.parseInt(fBit);
-            }
-            s=s.substring(idx); //-1
-
-            run(changeString);
+            result += Integer.parseInt(fBit);
+            s=s.substring(idx+1); //-1
+            run(s);
         }
 
         return result;
     }
+
 
     private static String findSign(String s) {
         //1+1
@@ -70,7 +57,6 @@ public class Calc {
         } catch (Exception e) {
             return "";
         }
-
         return result;
 
     }
