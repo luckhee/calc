@@ -12,8 +12,8 @@ public class Calc {
         List<String> signList = new ArrayList<>();
         int cnt =0;
 
-
-        s=s.replaceAll(" ","");
+        // 음수 계산할것~
+        //s=s.replaceAll(" ","");
 
         signList = findSign(s, signList);
         numList = findNum(s);
@@ -63,18 +63,10 @@ public class Calc {
 
     private static List<String> findSign(String s, List<String> signList) {
         //1+1
-
+        String[] trim = s.split(" "); // [10,*,-10]
         for(char x : s.toCharArray()) { //1+1
-            if(Character.isDigit(x)){
+            if(!Character.isDigit(x)) signList.add(String.valueOf(x));
 
-
-
-
-            } else {
-
-                signList.add(String.valueOf(x));
-
-            }
         }
 
         return signList; // 이게 문제여 내가보기엔 이게 진짜 대형사고fd
