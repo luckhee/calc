@@ -1,64 +1,78 @@
 package com.back;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Calc {
     static int result = 0;
-    static String sign = "+";
-    static String changeString = "";
-    static int idx = 0;
 
     static int run(String s) {
+        List<String> numList = new ArrayList<>();
+        List<String> signList = new ArrayList<>();
+        int cnt =0;
+
 
         s=s.replaceAll(" ","");
 
-        sign = findSign(s);
+        signList = findSign(s, signList);
+        numList = findNum(s);
 
-        if(changeString.isBlank()) {
-            if(sign.equals("+")) {
-                result += Integer.parseInt(s);
-            } else if (sign.equals("-")) {
-             result-=Integer.parseInt(s);
-            }
-             return result;
-        }
-        else {
-            String fBit = s.substring(0,idx); //1 여기서 "" 되는 문제 발생
-            result += Integer.parseInt(fBit);
-            s=s.substring(idx+1); //-1
-            run(s);
-        }
+        // 첫번째 숫자는 무조건 더해버려
+        result += Integer.parseInt(numList.get(cnt));
+        numList.remove(cnt);
+
+        calc(cnt, numList, signList);
+
 
         return result;
     }
 
+    private static int calc(int cnt, List<String> numList, List<String> signList) {
 
-    private static String findSign(String s) {
+        if(numList.isEmpty()) return result;
+        else {
+            if(signList.get(cnt).equals("+")) {
+                result += Integer.parseInt(numList.get(cnt));
+                numList.remove(cnt);
+                signList.remove(cnt);
+
+            } else if(signList.get(cnt).equals("-")) {
+                result -= Integer.parseInt(numList.get(cnt));
+                numList.remove(cnt);
+                signList.remove(cnt);
+
+            }
+        }
+
+        calc(cnt,numList,signList);
+
+        return result;
+    }
+
+    private static List<String> findNum(String s) {
+        return new ArrayList<>(Arrays.asList(s.split("[+\\-\\*]")));
+    }
+
+
+
+
+    private static List<String> findSign(String s, List<String> signList) {
         //1+1
-        idx = 0;
+
         for(char x : s.toCharArray()) { //1+1
             if(Character.isDigit(x)){
 
-                idx+=1;
+
 
 
             } else {
-                changeString = findStringbyIdx(s, idx);
-                return String.valueOf(x);
+
+                signList.add(String.valueOf(x));
+
             }
         }
-        changeString = findStringbyIdx(s, idx);
-        return sign; // 이게 문제여 내가보기엔 이게 진짜 대형사고fd
+
+        return signList; // 이게 문제여 내가보기엔 이게 진짜 대형사고fd
     }
-
-    private static String findStringbyIdx(String s, int idx) {
-
-        String result="";
-        try {
-             result = s.substring(idx+1);
-        } catch (Exception e) {
-            return "";
-        }
-        return result;
-
-    }
-
 }
