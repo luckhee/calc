@@ -1,7 +1,6 @@
 package com.back;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Calc {
@@ -55,7 +54,15 @@ public class Calc {
     }
 
     private static List<String> findNum(String s) {
-        return new ArrayList<>(Arrays.asList(s.split("[+\\-\\*]")));
+        String[] trim = s.split(" "); // [10, *, -10]
+        List<String> sortNum = new ArrayList<>();
+
+        for(String x : trim) {
+            if(!x.equals("+") && !x.equals("-") && !x.equals("*")) {
+                sortNum.add(x);
+            }
+        }
+        return sortNum;
     }
 
 
@@ -64,9 +71,18 @@ public class Calc {
     private static List<String> findSign(String s, List<String> signList) {
         //1+1
         String[] trim = s.split(" "); // [10,*,-10]
-        for(char x : s.toCharArray()) { //1+1
-            if(!Character.isDigit(x)) signList.add(String.valueOf(x));
+//        for(char x : s.toCharArray()) { //1+1
+//            if(!Character.isDigit(x)) signList.add(String.valueOf(x));
+//        }
 
+        for(String x : trim) { //1+1
+            try {
+                Integer.parseInt(x);
+            } catch (NumberFormatException e) {
+                signList.add(x);
+            }
+
+            //if(!Character.isDigit(Integer.parseInt(x))) signList.add(x);
         }
 
         return signList; // 이게 문제여 내가보기엔 이게 진짜 대형사고fd
