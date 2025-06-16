@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Calc {
-    static int result = 0;
+
 
     static int run(String s) {
         List<String> numList = new ArrayList<>();
@@ -15,42 +15,37 @@ public class Calc {
         //s=s.replaceAll(" ","");
 
         signList = findSign(s, signList);
+        //Collections.sort(signList);
         numList = findNum(s);
 
         // 첫번째 숫자는 무조건 더해버려
-        result += Integer.parseInt(numList.get(cnt));
+        int result = Integer.parseInt(numList.get(cnt));
         numList.remove(cnt);
 
-        calc(cnt, numList, signList);
+        result = calc(cnt, numList, signList, result);
 
 
         return result;
     }
 
-    private static int calc(int cnt, List<String> numList, List<String> signList) {
+    private static int calc(int cnt, List<String> numList, List<String> signList, int result) {
 
         if(numList.isEmpty()) return result;
-        else {
-            if(signList.get(cnt).equals("+")) {
-                result += Integer.parseInt(numList.get(cnt));
-                numList.remove(cnt);
-                signList.remove(cnt);
 
-            } else if(signList.get(cnt).equals("-")) {
-                result -= Integer.parseInt(numList.get(cnt));
-                numList.remove(cnt);
-                signList.remove(cnt);
+        String op = signList.get(cnt);
+        int num = Integer.parseInt(numList.get(cnt));
 
-            } else if(signList.get(cnt).equals("*")) {
-                result *= Integer.parseInt(numList.get(cnt));
-                numList.remove(cnt);
-                signList.remove(cnt);
-            }
+        switch(op) {
+            case "+" -> result += num;
+            case "-" -> result -= num;
+            case "*" -> result *= num;
         }
 
-        calc(cnt,numList,signList);
+        numList.remove(cnt);
+        signList.remove(cnt);
+        return calc(cnt,numList,signList, result);
 
-        return result;
+
     }
 
     private static List<String> findNum(String s) {
@@ -71,9 +66,6 @@ public class Calc {
     private static List<String> findSign(String s, List<String> signList) {
         //1+1
         String[] trim = s.split(" "); // [10,*,-10]
-//        for(char x : s.toCharArray()) { //1+1
-//            if(!Character.isDigit(x)) signList.add(String.valueOf(x));
-//        }
 
         for(String x : trim) { //1+1
             try {
@@ -81,10 +73,8 @@ public class Calc {
             } catch (NumberFormatException e) {
                 signList.add(x);
             }
-
-            //if(!Character.isDigit(Integer.parseInt(x))) signList.add(x);
         }
 
-        return signList; // 이게 문제여 내가보기엔 이게 진짜 대형사고fd
+        return signList;
     }
 }
