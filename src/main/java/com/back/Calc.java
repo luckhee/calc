@@ -1,6 +1,7 @@
 package com.back;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Calc {
@@ -11,21 +12,53 @@ public class Calc {
         List<String> signList = new ArrayList<>();
         int cnt =0;
 
-        // 음수 계산할것~
-        //s=s.replaceAll(" ","");
+
 
         signList = findSign(s, signList);
-        //Collections.sort(signList);
         numList = findNum(s);
 
-        // 첫번째 숫자는 무조건 더해버려
+        int num = sortSign(signList);
+
+        if(num > 0) {
+            numList = sortNum(numList, num+1);
+        }
+
+
+
         int result = Integer.parseInt(numList.get(cnt));
         numList.remove(cnt);
+
+
 
         result = calc(cnt, numList, signList, result);
 
 
         return result;
+    }
+
+    private static List<String> sortNum(List<String> numList, int num) {
+        String str = numList.get(num);
+        String str1 = numList.get(0);
+        numList.set(0,str);
+        numList.set(num,str1);
+        return numList;
+    }
+
+    private static int sortSign(List<String> signList) {
+        int cnt = 0;
+
+        for (int i = 0; i < signList.size(); i++) {
+            if(signList.get(i).equals("*")) {
+                cnt = i;
+                Collections.sort(signList);
+            }
+            else {
+                cnt = 0;
+            }
+        }
+
+
+        return cnt;
     }
 
     private static int calc(int cnt, List<String> numList, List<String> signList, int result) {
