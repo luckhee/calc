@@ -37,11 +37,20 @@ public class Calc {
     }
 
     private static List<String> sortNum(List<String> numList, int num) {
-        String str = numList.get(num);
-        String str1 = numList.get(0);
-        numList.set(0,str);
-        numList.set(num,str1);
-        return numList;
+        String leftOperand = numList.get(num - 1); // 5
+        String rightOperand = numList.get(num);    // 2
+
+        List<String> reordered = new ArrayList<>();
+        reordered.add(leftOperand);
+        reordered.add(rightOperand);
+
+        for (int i = 0; i < numList.size(); i++) {
+            if (i != num && i != num - 1) {
+                reordered.add(numList.get(i));
+            }
+        }
+
+        return reordered;
     }
 
     private static int sortSign(List<String> signList) {
