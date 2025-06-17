@@ -126,6 +126,8 @@ public class Calc {
     }
 
     private static List<String> findNum(String s) {
+        s=s.replaceAll("\\(","");
+        s=s.replaceAll("\\)","");
         String[] trim = s.split(" "); // [10, *, -10]
         List<String> sortNum = new ArrayList<>();
 
@@ -142,7 +144,11 @@ public class Calc {
 
     private static List<String> findSign(String s, List<String> signList) {
         //1+1
-        String[] trim = s.split(" "); // [10,*,-10]
+        s=s.replaceAll("\\(","");
+        s=s.replaceAll("\\)","");
+
+
+        String[] trim = s.split(" ");
 
         for(String x : trim) { //1+1
             try {
