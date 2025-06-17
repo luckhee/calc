@@ -1,8 +1,6 @@
 package com.back;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Calc {
 
@@ -16,6 +14,11 @@ public class Calc {
 
         signList = findSign(s, signList);
         numList = findNum(s);
+        int result = 0;
+        if(signList.stream().anyMatch(sign -> !sign.equals("*"))) {
+            result = multiplyCalc(numList, signList);
+        }
+
 
         int num = sortSign(signList);
 
@@ -23,10 +26,11 @@ public class Calc {
             numList = sortNum(numList, num+1);
         }
 
+        if(numList.size() >0) {
+            result += Integer.parseInt(numList.get(cnt));
+            numList.remove(cnt);
+        }
 
-
-        int result = Integer.parseInt(numList.get(cnt));
-        numList.remove(cnt);
 
 
 
@@ -34,6 +38,40 @@ public class Calc {
 
 
         return result;
+    }
+
+    private static int multiplyCalc(List<String> numList, List<String> signList) {
+        List<Integer> multiplyList = new ArrayList<>();
+        int result = 0;
+        int index = 0;
+        for(String x : signList) {
+            if(x.equals("*")) multiplyList.add(index);
+            index +=1;
+        }
+
+        for (int i = 0; i < multiplyList.size(); i++) {
+            int x = multiplyList.get(i);
+
+            result += Integer.parseInt(numList.get(x)) * Integer.parseInt(numList.get(x + 1));
+
+        }
+        Set<Integer> toRemoveSet = new HashSet<>();
+        for (int i = 0; i < multiplyList.size(); i++) {
+            int idx = multiplyList.get(i);
+            toRemoveSet.add(idx);
+            toRemoveSet.add(idx + 1);
+        }
+        List<Integer> toRemoveList = new ArrayList<>(toRemoveSet);
+        toRemoveList.sort(Collections.reverseOrder());
+
+        for(int x : toRemoveList) {
+            numList.remove(x);
+        }
+        signList.removeIf(sign -> sign.equals("*"));
+
+
+
+        return result ;
     }
 
     private static List<String> sortNum(List<String> numList, int num) {
@@ -57,12 +95,9 @@ public class Calc {
         int cnt = 0;
 
         for (int i = 0; i < signList.size(); i++) {
-            if(signList.get(i).equals("*")) {
+            if(signList.get(i).equals("*") && i != 0) {
                 cnt = i;
                 Collections.sort(signList);
-            }
-            else {
-                cnt = 0;
             }
         }
 
